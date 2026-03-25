@@ -1,35 +1,40 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Terms of Service - ORU',
-  description: 'Terms of Service for ORU AI Assistant',
+  description: 'Terms of Service for ORU AI-Powered Wearable Companion',
 };
 
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-[#09090B]">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#09090B]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A962] to-[#A88B4A] flex items-center justify-center">
-              <span className="text-xl font-bold text-black">O</span>
-            </div>
-            <span className="text-xl font-semibold text-white">ORU</span>
+      <nav className="fixed top-0 w-full z-50 bg-[#09090B]/90 backdrop-blur-xl border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+            <Image 
+              src="/icon.png" 
+              alt="ORU" 
+              width={40} 
+              height={40} 
+              className="rounded-xl w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <span className="text-lg sm:text-xl font-semibold text-white">ORU</span>
           </Link>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy</Link>
+            <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link>
           </div>
         </div>
       </nav>
 
       {/* Content */}
-      <main className="pt-32 pb-20 px-6">
+      <main className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-            <p className="text-gray-400">Last updated: March 25, 2024</p>
+          <div className="mb-8 sm:mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4">Terms of Service</h1>
+            <p className="text-gray-400 text-sm sm:text-base">Last updated: March 25, 2024</p>
           </div>
 
           <div className="prose prose-invert max-w-none space-y-8">
